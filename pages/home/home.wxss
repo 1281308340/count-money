@@ -1,0 +1,61 @@
+/* pages/home/home.wxss */
+.header{
+  display: flex;
+  height: 45rpx;
+  margin: 6rpx 0rpx 14rpx;
+  font-size: 14rpx;
+  font-weight: bold
+}
+.header>view{
+  flex: 1;
+  text-align: center
+}
+.tit{
+  color: #999
+}
+.bor{
+  border-right: 2rpx solid #000;
+}
+.img{
+  width: 14rpx;
+  height: 14rpx;
+  margin-left: 8rpx;
+  vertical-align: middle
+}
+.box{
+  width: 100px;
+  height: 100px;
+  background: red
+}
+.list-head{
+  display: flex;
+  height: 60rpx;
+  background: #eee;
+  line-height: 60rpx;
+  font-size: 20rpx
+}
+.list-head>view{
+  flex: 1
+}
+.list-item{
+    display: flex;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 18rpx
+}
+.list-item image{
+  width: 40rpx;
+  height: 40rpx
+}
+.item-left{
+  width: 80rpx
+}
+
+.item-right{
+  display: flex;
+  flex: 1;
+  border-bottom: 1px solid #999
+}
+.item-right>view{
+  flex: 1
+}

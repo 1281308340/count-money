@@ -1,0 +1,66 @@
+<view>
+  <view class="header">
+    <view class="bor">
+      <picker bindchange="change" mode="date" fields="month">
+        <view class="tit">{{year}}年</view>
+        <view>
+          <text>{{month}}月</text>
+          <image class="img" src="./../../img/jiantou.png"></image> 
+        </view>
+      </picker>
+    </view>
+    <view>
+      <view class="tit">月支出(元)</view>
+      <view>{{pay}}</view>
+    </view>
+    <view>
+      <view class="tit">月收入(元)</view>
+      <view>{{income}}</view>
+    </view>
+    <view>
+      <view class="tit">月结余(元)</view>
+      <view>{{income - pay}}</view>
+    </view>
+  </view>
+  
+  <view>
+    <view wx:for="{{list}}" class="list">
+      <view class="list-head">
+        <view>
+          <text>{{item.date}}</text>
+          <text>{{item.day}}</text>
+        </view>
+        <view>
+          <text>收入：{{item.income}}</text>
+          <text>支出：{{item.pay}}</text>
+        </view>
+      </view>
+      <view class="list-con">
+        <view wx:for="{{item.data}}"  class="list-item">
+          <view class="item-left">
+            <image src="./../../img/ZB.png"></image>
+          </view>
+          <view class="item-right">
+            <view>{{item.tip}}</view>
+            <view>({{item.msg}})</view>
+            <view wx-if="{{item.pay}}">-{{item.pay}}</view>
+            <view wx-if="{{item.income}}">+{{item.income}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!-- <view wx:key="{{index}}" wx:for="{{arrData}}">
+  {{index}}---{{item}}
+</view> -->
+<!-- <view wx:key="{{index}}" wx:for="{{arrData2}}">
+  我叫{{item.name}},我今年{{item.age}}岁了！！！
+</view> -->
+
+<!-- <button bindtap="tap">点击显示隐藏</button>
+<view class="box" wx:if="{{isShow}}"></view> -->
+
+<!-- <view hidden="{{true}}" class="box"></view> -->

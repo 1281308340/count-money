@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/add/add",
+    "pages/home/home"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fed955",
+    "navigationBarTitleText": "记账宝",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath":"./img/ZB.png",
+        "selectedIconPath":"./img/linghtZB.png"
+      },
+      {
+        "pagePath": "pages/add/add",
+        "text": "记一笔",
+        "iconPath": "./img/jia.png",
+        "selectedIconPath": "./img/lightjia.png"
+      }
+    ],
+    "color":"#000000",
+    "selectedColor":"#fed955"
+  }
+}

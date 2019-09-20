@@ -1,0 +1,34 @@
+<view>
+  <view class="btnBox">
+    <view bindtap="btn1" class="btn1 {{isActive?'active':''}}">支出</view>
+    <view bindtap="btn2" class="btn2 {{isActive?'':'active'}}" >收入</view>
+  </view>
+
+  <view class="tipbox">
+    <view data-index="{{index}}" bindtap="tap" class="tip {{iNow==index?'on':''}}" wx:for="{{isActive?paydata:incomedata}}">{{item}}
+    </view>
+  </view>
+
+  <view class="inputBox">
+    <view>
+      <picker mode='date' bindchange="change" >
+        <input  value="{{date}}" auto-focus="{{true}}"></input>
+      </picker>
+    </view>
+    <view>
+      <input bindinput="input" type="digit" placeholder-class="red" placeholder="0.00"></input>
+    </view>
+  </view>
+</view>
+<!-- <view class="tipbox" wx:if="{{isActive}}">
+    <view class="tip" wx:for="{{paydata}}">{{item}}</view>
+</view>
+
+<view  class="tipbox" wx:if="{{!isActive}}">
+  <view class="tip" wx:for="{{incomedata}}">{{item}}</view>
+</view> -->
+<!-- <button bindtap="add">存数据</button>
+<button bindtap="get">获取数据</button>
+<button bindtap='remove'>删除数据</button> -->
+<textarea bindinput="inputMsg" class="msg"></textarea>
+<button bindtap="addMsg">添加</button>
